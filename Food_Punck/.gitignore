@@ -105,7 +105,9 @@ local.properties
 *.log.*
 *.sig
 
-pkg/
-src/
+# who knows what the below line could do...
+pkg/ 
+# dunno why this line was included below, as it was blocking all of my pushes...
+# src/  
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Eclipse,ArchLinuxPackages
