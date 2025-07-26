@@ -9,13 +9,23 @@ public class CommonConst {
 	//////////////////////////////////
 
 	private static final String APP_NAME = "Fruit_Punk\u2122";
+	public static final String HOST_START = "localhost:3306/fruit_punk";
+	public static final String ADD_MAPPINGS = "/**"; // CONFIRM WHAT THIS REPRESENTS
+	public static final int MAX_AGE_SITE = 3600; // CONFIRM WHAT THIS REPRESENTS
+	public static final String ALLOWED_ORIGINS = "http://localhost:8080";
+	public static final String ALLOWED_METHOD_GET = "GET";
+	public static final String ALLOWED_METHOD_POST = "POST";
+	public static final String ALLOWED_METHOD_PUT = "PUT";
+	public static final String ALLOWED_METHOD_DELETE = "DELETE";
+	public static final String ALLOWED_METHOD_OPTIONS = "OPTIONS";
+	public static final String ALLOWED_HEADERS = "*";
+	public static final boolean ALLOWED_CREDENTIALS = true;
 
 	/////////////////////////////////
 	/// CONTROLLER INDEX MAPPINGS ///
 	/////////////////////////////////
 
 	/// GENERAL MAPPINGS
-	public static final String HOST_START = "localhost:3306/fruit_punk";
 	public static final String INDEX = "/";
 	public static final String INDEX_STORE = "/store";
 	public static final String INDEX_USER = "/user";
