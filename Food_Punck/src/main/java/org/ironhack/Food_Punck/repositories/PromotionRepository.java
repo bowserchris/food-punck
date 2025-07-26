@@ -1,5 +1,6 @@
 package org.ironhack.Food_Punck.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.ironhack.Food_Punck.models.Promotion;
@@ -10,5 +11,6 @@ public interface PromotionRepository extends JpaRepository<Promotion, Integer> {
 
 	Optional<Promotion> findByName(String name);
 	Optional<Promotion> findByType(Enum<PromotionType> type);
+	List<Promotion> findByIdPromo(int idPromo);
 	
 }

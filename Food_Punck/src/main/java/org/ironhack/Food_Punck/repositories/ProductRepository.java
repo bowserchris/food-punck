@@ -1,5 +1,6 @@
 package org.ironhack.Food_Punck.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.ironhack.Food_Punck.models.Product;
@@ -10,5 +11,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 	Optional<Product> findByName(String name);
 	Optional<Product> findByType(Enum<ProductType> type);
+	List<Product> findByIdProduct(int idProduct);
 	
 }

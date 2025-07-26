@@ -1,5 +1,6 @@
 package org.ironhack.Food_Punck.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.ironhack.Food_Punck.models.Address;
@@ -9,5 +10,6 @@ public interface AddressRepository extends JpaRepository<Address, Integer> {
 	
 	Optional<Address> findByPostCode(String postCode);
 	Optional<Address> findByStreet(String street);
+	List<Address> findByIdAddress(int idAddress);
 
 }

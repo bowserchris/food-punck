@@ -5,6 +5,9 @@ import java.sql.Timestamp;
 import org.ironhack.Food_Punck.util.PromotionType;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +18,8 @@ import lombok.RequiredArgsConstructor;
 @Entity
 public class Promotion {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private PromotionType type;
