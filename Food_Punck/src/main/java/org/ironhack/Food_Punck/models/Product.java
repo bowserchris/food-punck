@@ -3,12 +3,16 @@ package org.ironhack.Food_Punck.models;
 import java.sql.Timestamp;
 import java.util.List;
 
+import org.ironhack.Food_Punck.util.CommonConst;
 import org.ironhack.Food_Punck.util.ProductType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -27,9 +31,18 @@ public class Product {
 	private double price;
 	private float weight;
 	private boolean discount;
-	private Store store;
 	private Timestamp dateDelivered;
 	private Timestamp dateExpired;
+	
+	@ManyToMany
+	@JoinTable(name = CommonConst.MYSQL_TABLE_STORES_INVENTORY, 					/// Store_Inventory, .idstore, .idproduct 
+				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_STORE), 
+					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT))
+	private Store store;
+	@ManyToMany
+	@JoinTable(name = CommonConst.MYSQL_TABLE_PRODUCTS_PROMOTIONS,		/// Product_has_Promotions, .idProduct, .idPromotion 
+				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT),
+					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PROMOTION))
 	private List<Promotion> promotions;
 	
 	// If quantity has value above 0, calculates and return total by units, otherwise by weight and updates it
