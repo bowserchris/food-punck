@@ -55,9 +55,31 @@ public class CommonConst {
 	public static final String URL_BY_RESULT_ID = "/idResult/{id}";
 	
 	/////////////////////////////////
-	/// ///
+	///   MYSQL NAME VARIABLES	  ///
 	/////////////////////////////////
-	  
+	
+	/// MYSQL TABLE NAMES ///
+	public static final String MYSQL_TABLE_USERS = "Users";
+	public static final String MYSQL_TABLE_USERS_STORES = "Users_follow_Stores";
+	public static final String MYSQL_TABLE_USERS_PRODUCTS = "Users_has_Products";
+	public static final String MYSQL_TABLE_REVIEWS = "Reviews";
+	public static final String MYSQL_TABLE_RESULT_COMPARE = "Result_Comparative_Log";
+	public static final String MYSQL_TABLE_ADDRESSES = "Addresses";
+	public static final String MYSQL_TABLE_STORES = "Stores";
+	public static final String MYSQL_TABLE_STORES_INVENTORY = "Stores_Inventory";
+	public static final String MYSQL_TABLE_PROMOTIONS = "Promotions";
+	public static final String MYSQL_TABLE_PRODUCTS = "Products";
+	public static final String MYSQL_TABLE_PRODUCTS_PROMOTIONS = "Products_has_Promotions";
+	
+	/// MYSQL ID NAMES ///
+	public static final String MYSQL_ID_ONLY = "id";
+	public static final String MYSQL_ID_USER = "id_User";
+	public static final String MYSQL_ID_STORE = "id_Store";
+	public static final String MYSQL_ID_REVIEW = "id_Review";
+	public static final String MYSQL_ID_PRODUCT = "id_Product";
+	public static final String MYSQL_ID_RESULT = "id_Result";
+	public static final String MYSQL_ID_ADDRESS = "id_Address";
+	public static final String MYSQL_ID_PROMOTION = "id_Promotion";
 	
 	/////////////////////////////////
 	/// ///

@@ -3,10 +3,17 @@ package org.ironhack.Food_Punck.models;
 import java.sql.Timestamp;
 import java.util.List;
 
+import org.ironhack.Food_Punck.util.CommonConst;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -24,8 +31,16 @@ public class Store {
 	private String email;
 	private String password;
 	private Timestamp dateCreated;
+	
+	@OneToOne
+	@JoinColumn(name = CommonConst.MYSQL_ID_ADDRESS, referencedColumnName = CommonConst.MYSQL_ID_ADDRESS) // 	store."id_Address",address."id_Address"
 	private Address address;
+	@ManyToMany
+	@JoinTable(name = CommonConst.MYSQL_TABLE_STORES_INVENTORY, 					/// Store_Inventory, .idstore, .idproduct 
+				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_STORE), 
+					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT))
 	private List<Product> inventory;
+	@OneToMany(mappedBy = "promotions")	/// either its referencing this list attribute below, or change to "store" for within hte Promotion.class Store "store" attribute
 	private List<Promotion> promotions;
 	
 	public void addToInventory(Product product) {
