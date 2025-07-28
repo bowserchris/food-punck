@@ -2,7 +2,7 @@
 # ¿Que es Food Punck? 🥦
 Food Punck es una aplicacion con el proposito basico donde usuarios pueden comparar precios entres sus fruterias/panaderias locales o incluso con supermercados para ver donde esta la mejor oferta. Otras funciones seran agregados cuando para darle mas flexibilidad al usuario y a las tiendas locales.
 
-# Tabla de Contenidos
+### Tabla de Contenidos
 - [Objetivos](#objetivos-de-food-punck-)
 - [Funcionalidades Principales](#funcionalidades-principales-)
 - [Flujo del app](#flujo-de-food-punck-)
