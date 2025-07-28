@@ -1,6 +1,35 @@
 # 🥝🍌🦍🍌🍐 Food Punck 🍎👊🐵👊🍎
-A price comparator app for local stores
+# ¿Que es Food Punck? 🥦
+Food Punck es una aplicacion con el proposito basico donde usuarios pueden comparar precios entres sus fruterias/panaderias locales o incluso con supermercados para ver donde esta la mejor oferta. Otras funciones seran agregados cuando para darle mas flexibilidad al usuario y a las tiendas locales.
 
+# Objetivos de Food Punck 🍅
+El **Food Punck** es para que un usuario puede comparar precios/pesos entre varias tiendas locales (como fruterías y panaderías) e incluso supermercados. Las tiendas locales podrian ofrecer y notificar a usuarios de las ofertas o cambios de precios que tienen en sus locales, y asi evitar el desgaste de su producto. 
+
+# Funcionalidades principales 🍇
+Las **funcionalidades principales** del app son:
+- `Users` pueden comparar precios entre 2 productos de 2 tiendas diferentes (o mas)
+- `Users` pueden buscar tiendas y productos por su nombre, código postal o por producto
+- `Users` pueden dar rankings y reviews a tiendas por su servicio y calidad
+- `Stores` pueden notificar usuarios de promociones y aplicarlos a productos
+
+# Flujo de Food Punck 🍷
+1. **Food Punck** empezara con el [[#1. Login del Usuario y Tienda|Start Login]] y ira en 2 caminos
+	1. Llegara al **Indice del Usuario** y decidirá que opción hacer:
+		1. **Opción 1** - empezara la [[#2. Usuario buscando productos por nombre, tienda o codigo postal|Búsqueda de Products]] 
+		2. **Opción 2** - mirara las [[#3. Usuario "siguiendo" una Tienda|Tiendas que sigue]] el **usuario**
+			1. Si tiene **tiendas**, puede crear **reseñas** de ellos y ir a **opción 3**
+		3. **Opción 3** - **usuario** [[#4. Usuario crea una reseña|crea reseñas]]
+		4. **Opción 4** - **usuario** [[#5. Usuario crea una lista de productos|crea listas de productos]]
+		5. **Opción 5**  - **usuario** revisa sus **resultados** y sino salta directo a **Opción 6** [[#6. Usuario compara productos|a comparar productos]]
+		6. Si el **usuario** no tiene algo dentro de las **opciones 2-6**, va directo a [[#2. Usuario buscando productos por nombre, tienda o codigo postal|buscar productos]]
+	2. Llegará al **Indice de la Tienda** y decidirá que opción hacer:
+		1. **Opción 1** - la **tienda** puede [[#7. Tienda crea y añade productos a su inventario|crear y añadir productos]]  a su **inventario**
+		2. **Opción 2** - la **tienda** puede [[#8. Tienda crea promociones y los aplica a productos|crear y añadir promociones]] a sus **productos**
+		3. **Opción 3** - la **tienda** puede [[#9. Tienda hace notificaciones de sus productos|mandar notificaciones]] a **usuarios**
+			1. Si no tiene **promociones** creados se redirige a [[#8. Tienda crea promociones y los aplica a productos|opción 2]]
+		4. **Opción 4** - la **tienda** puede [[#10. Tienda revisa sus reseñas|revisar sus reseñas]] que le han hecho **usuarios**
+
+# Como arrancar el app como programador 🍕
 Para desplegar el app en tu entorno local, utilizando los métodos por **IDE**, continue los siguientes pasos:
 ## Paso 1: Clonar el Repositorio
 Primero, clona el repositorio desde **GitHub** con el comando `git clone <url>` y a continuación con el comando `cd <file/path` creas un directorio donde se almacena el repositorio:
