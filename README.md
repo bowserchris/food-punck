@@ -1,4 +1,4 @@
-# 🍎🍌🦍🍌🍎 Food Punck 🥝👊🐵👊🍐
+# 🥝🍌🦍🍌🍐 Food Punck 🍎👊🐵👊🍎
 A price comparator app for local stores
 
 Para desplegar el app en tu entorno local, utilizando los métodos por **IDE**, continue los siguientes pasos:
