@@ -4,11 +4,19 @@ import java.util.List;
 import java.util.Optional;
 
 import org.ironhack.Food_Punck.models.ResultCompare;
+import org.ironhack.Food_Punck.util.CommonConst;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+import jakarta.persistence.Table;
+
+@Repository
+@Table(name = CommonConst.MYSQL_TABLE_RESULT_COMPARE)
 public interface ResultCompareRepository extends JpaRepository<ResultCompare, Integer> {
 	
 	Optional<ResultCompare> findByUserId(int idUser);
 	List<ResultCompare> findByIdResult(int idResult);
+	List<ResultCompare> findByIdProduct(int idProduct);
+	List<ResultCompare> findByIdUserAndIdProduct(int idUser, int idProduct);
 
 }

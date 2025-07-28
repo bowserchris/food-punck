@@ -1,10 +1,7 @@
 package org.ironhack.Food_Punck.controllers;
 
-import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.util.List;
 
-import org.hibernate.type.descriptor.java.LocalDateTimeJavaType;
 import org.ironhack.Food_Punck.models.Product;
 import org.ironhack.Food_Punck.models.Promotion;
 import org.ironhack.Food_Punck.models.ResultCompare;
