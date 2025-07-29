@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Fruit Punk!</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<h1>Welcome to Fruit Punk</h1>
+<h2>What would you like to do?</h2>
+
+<div class="container">
+    <div class="box left-hand">
+        <button id="createUserBtn">Create User</button>
+        <button id="getUsersBtn">Get Users</button>
+    </div>
+    <div class="box right-hand">
+        <button id="createProductBtn">Create Product</button>
+        <button id="getProductsBtn">Get Products</button>
+    </div>
+</div>
+
+<div id="userForm" class="form hidden">
+    <h2>Create User</h2>
+    <input type="text" id="username" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="sendUserBtn">Create</button>
+    <button id="cancelUserBtn">Cancel</button>
+</div>
+
+<div id="productForm" class="form hidden">
+    <h2>Create Product</h2>
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <input type="number" id="productWeight" placeholder="Weight">
+    <button id="sendProductBtn">Create</button>
+    <button id="cancelProductBtn">Cancel</button>
+</div>
+
+<div class="list-container">
+    <ul id="userList"></ul>
+    <ul id="productList"></ul>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
