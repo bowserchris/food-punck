@@ -99,11 +99,9 @@ CREATE TABLE IF NOT EXISTS `fruit_punk`.`Products` (
   `discount` TINYINT(1) NULL DEFAULT 0,
   `quantity` FLOAT NOT NULL DEFAULT 0,
   `date_purchased` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_delivered` TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `date_sold` TIMESTAMP NULL,
-  `date_expired` TIMESTAMP NULL,
   `id_Store` INT NOT NULL,
-  PRIMARY KEY (`id_Product`, `id_Store`),
+  PRIMARY KEY (`id_Product`),
   INDEX `fk_Products_Stores1_idx` (`id_Store` ASC) VISIBLE,
   CONSTRAINT `fk_Products_Stores1`
     FOREIGN KEY (`id_Store`)
@@ -163,13 +161,14 @@ CREATE TABLE IF NOT EXISTS `fruit_punk`.`Reviews` (
 -- Table `fruit_punk`.`Users_has_Products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `fruit_punk`.`Users_has_Products` (
+  `id_User_Product` INT NOT NULL AUTO_INCREMENT,
   `id_User` INT NOT NULL,
   `id_Product` INT NOT NULL,
   `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_modified` TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_User`, `id_Product`),
   INDEX `fk_Users_has_Products_Products1_idx` (`id_Product` ASC) VISIBLE,
   INDEX `fk_Users_has_Products_Users1_idx` (`id_User` ASC) VISIBLE,
+  PRIMARY KEY (`id_User_Product`),
   CONSTRAINT `fk_Users_has_Products_Users1`
     FOREIGN KEY (`id_User`)
     REFERENCES `fruit_punk`.`Users` (`id_User`)

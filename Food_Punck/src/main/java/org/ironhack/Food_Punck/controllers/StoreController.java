@@ -5,6 +5,7 @@ import java.util.List;
 import org.ironhack.Food_Punck.models.Product;
 import org.ironhack.Food_Punck.models.Promotion;
 import org.ironhack.Food_Punck.models.Store;
+import org.ironhack.Food_Punck.repositories.ProductPromotionRepository;
 import org.ironhack.Food_Punck.repositories.ProductRepository;
 import org.ironhack.Food_Punck.repositories.PromotionRepository;
 import org.ironhack.Food_Punck.repositories.StoreRepository;
@@ -34,6 +35,9 @@ public class StoreController {
 
 	@Autowired
 	private PromotionRepository promoRepo;
+	
+	@Autowired
+	private ProductPromotionRepository productPromoRepo;
 
 	private final Logger logger = LoggerFactory.getLogger(StoreController.class);
 

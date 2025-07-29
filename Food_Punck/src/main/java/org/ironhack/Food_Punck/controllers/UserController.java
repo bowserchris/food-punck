@@ -8,12 +8,14 @@ import org.ironhack.Food_Punck.models.ResultCompare;
 import org.ironhack.Food_Punck.models.Review;
 import org.ironhack.Food_Punck.models.Store;
 import org.ironhack.Food_Punck.models.User;
+import org.ironhack.Food_Punck.repositories.ProductPromotionRepository;
 import org.ironhack.Food_Punck.repositories.ProductRepository;
 import org.ironhack.Food_Punck.repositories.PromotionRepository;
 import org.ironhack.Food_Punck.repositories.ResultCompareRepository;
 import org.ironhack.Food_Punck.repositories.ReviewRepository;
 import org.ironhack.Food_Punck.repositories.StoreRepository;
 import org.ironhack.Food_Punck.repositories.UserRepository;
+import org.ironhack.Food_Punck.repositories.UserStoreRepository;
 import org.ironhack.Food_Punck.util.CommonConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,11 +52,17 @@ public class UserController {
 	@Autowired
 	private PromotionRepository promoRepo;
 	
+	@Autowired
+	private ProductPromotionRepository productPromoRepo;
+	
+	@Autowired
+	private UserStoreRepository userStoreRepo;
+	
 	private final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	@GetMapping("/")
 	public String hello() {
-		return "Hello from the store backend.";
+		return "Hello from the user backend.";
 	}
 	
 	/* methods needed to fully implement

@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -32,7 +33,11 @@ public class ResultCompare {
 	private Timestamp dateModified;
 	
 	@ManyToOne
-	@JoinColumn(name = CommonConst.MYSQL_ID_USER, referencedColumnName = CommonConst.MYSQL_ID_USER)	/// result.iduser, user.iduser
+	//@OneToMany
+	@JoinTable(name = CommonConst.MYSQL_TABLE_USERS_PRODUCTS,
+				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_USER),
+					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT))
+	// @JoinColumn(name = CommonConst.MYSQL_ID_USER, referencedColumnName = CommonConst.MYSQL_ID_USER)	/// result.iduser, user.iduser
 	private User user;
 	
 	//// Unsure if whether or not to change this datatype to a list of List<>UsersHasProducts> ///
