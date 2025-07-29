@@ -17,7 +17,5 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 	Optional<Product> findByName(String name);
 	Optional<Product> findByType(Enum<ProductType> type);
-	List<Product> findByIdProduct(int idProduct);
-	List<Product> findByIdStore(int idStore);
 
 }

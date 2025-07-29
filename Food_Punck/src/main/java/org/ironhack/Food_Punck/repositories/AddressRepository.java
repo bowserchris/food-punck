@@ -16,6 +16,5 @@ public interface AddressRepository extends JpaRepository<Address, Integer> {
 	
 	Optional<Address> findByPostCode(String postCode);
 	Optional<Address> findByStreet(String street);
-	List<Address> findByIdAddress(int idAddress);
 
 }

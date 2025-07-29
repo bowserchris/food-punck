@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
 	
 	Optional<Review> findByTitle(String title);
-	Optional<Review> findByStore(int idStore);
-	List<Review> findByIdReview(int idReview);
+	Optional<Review> findByStoreId(int idStore);
+//	List<Review> findByIdReview(int idReview);
 
 }
