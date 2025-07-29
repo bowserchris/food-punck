@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -33,14 +34,19 @@ public class Product {
 	private boolean discount;
 	private Timestamp dateDelivered;
 	private Timestamp dateExpired;
+	private float quantity;
+	private Timestamp datePurchased;
+	private Timestamp dateSold;
+	
+//	@JoinTable(name = CommonConst.MYSQL_TABLE_STORES_INVENTORY, 					/// Store_Inventory, .idstore, .idproduct 
+//				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_STORE), 
+//					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT))
+	@ManyToOne
+	@JoinColumn(name = CommonConst.MYSQL_ID_STORE, referencedColumnName = CommonConst.MYSQL_ID_STORE)
+	private Store store;
 	
 	@ManyToMany
-	@JoinTable(name = CommonConst.MYSQL_TABLE_STORES_INVENTORY, 					/// Store_Inventory, .idstore, .idproduct 
-				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_STORE), 
-					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT))
-	private Store store;
-	@ManyToMany
-	@JoinTable(name = CommonConst.MYSQL_TABLE_PRODUCTS_PROMOTIONS,		/// Product_has_Promotions, .idProduct, .idPromotion 
+	@JoinTable(name = CommonConst.MYSQL_TABLE_PRODUCTS_PROMOTIONS,		/// Products_has_Promotions, .idProduct, .idPromotion 
 				joinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT),
 					inverseJoinColumns = @JoinColumn(name = CommonConst.MYSQL_ID_PROMOTION))
 	private List<Promotion> promotions;
