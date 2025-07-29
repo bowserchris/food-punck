@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.ironhack.Food_Punck.models.ResultCompare;
 import org.ironhack.Food_Punck.util.CommonConst;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import jakarta.persistence.Table;
@@ -15,8 +16,9 @@ import jakarta.persistence.Table;
 public interface ResultCompareRepository extends JpaRepository<ResultCompare, Integer> {
 	
 	Optional<ResultCompare> findByUserId(int idUser);
-	List<ResultCompare> findByIdResult(int idResult);
-	List<ResultCompare> findByIdProduct(int idProduct);
-	List<ResultCompare> findByIdUserAndIdProduct(int idUser, int idProduct);
+	List<ResultCompare> findByListProductsId(int idProduct);
+	
+	@Query(value = "SELECT * FROM Result_Comparative_Log WHERE id_user = ?1 AND product_id = ?2", nativeQuery = true)
+	List<ResultCompare> findByUserProductId(int idUser, int idProduct);
 
 }

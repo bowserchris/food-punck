@@ -17,6 +17,5 @@ public interface PromotionRepository extends JpaRepository<Promotion, Integer> {
 
 	Optional<Promotion> findByName(String name);
 	Optional<Promotion> findByType(Enum<PromotionType> type);
-	List<Promotion> findByIdPromo(int idPromo);
 	
 }

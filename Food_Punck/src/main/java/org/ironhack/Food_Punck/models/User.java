@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.ironhack.Food_Punck.util.CommonConst;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id_User")
 	private int id;
 	private String userName;
 	private String name;

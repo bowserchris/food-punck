@@ -1,6 +1,7 @@
 package org.ironhack.Food_Punck.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.ironhack.Food_Punck.models.Product;
 import org.ironhack.Food_Punck.models.Promotion;
@@ -84,15 +85,16 @@ public class StoreController {
 	
 	@PutMapping(CommonConst.URL_BY_STORE_ID) // base + "/store" + "/idStore/{id}"
 	public ResponseEntity<Store> updateStore(@PathVariable int id, @RequestBody Store storeDetails) {
-		Store updatedStore = this.storeRepo.findById(id).orElse(null);
-		if (updatedStore != null) {
-			updatedStore.setId(storeDetails.getId());
-			updatedStore.setName(storeDetails.getName());
-			updatedStore.setEmail(storeDetails.getEmail());
-			return ResponseEntity.ok(this.storeRepo.save(updatedStore));
-		} else {
-			return ResponseEntity.notFound().build();
-		}
+		Optional<Store> updatedStore = this.storeRepo.findById(id);
+//		if (updatedStore != null) {
+//			updatedStore.setId(storeDetails.getId());
+//			updatedStore.setName(storeDetails.getName());
+//			updatedStore.setEmail(storeDetails.getEmail());
+//			return ResponseEntity.ok(this.storeRepo.save(updatedStore));
+//		} else {
+//			return ResponseEntity.notFound().build();
+//		}
+		return null;
 	}
 	
 	@PutMapping(CommonConst.URL_BY_PRODUCT_ID) // base + "/store" + "/idProduct/{id}"
@@ -152,8 +154,8 @@ public class StoreController {
 	/// All 3 get1 mappings ///
 	
 	@GetMapping(CommonConst.URL_BY_STORE_ID) // base + "/store" + "/idStore/{id}"
-	public ResponseEntity<List<Store>> getStoreByID(@PathVariable int id) {
-		List<Store> store = this.storeRepo.findByIdStore(id);
+	public ResponseEntity<Optional<Store>> getStoreByID(@PathVariable int id) {
+		Optional<Store> store = this.storeRepo.findById(id);
 		if (store.isEmpty()) {
 			return ResponseEntity.notFound().build();
 		} else {
@@ -162,8 +164,8 @@ public class StoreController {
 	}
 	
 	@GetMapping(CommonConst.URL_BY_PRODUCT_ID) // base + "/store" + "/idProduct/{id}"
-	public ResponseEntity<List<Product>> getProductByID(@PathVariable int id) {
-		List<Product> product = this.productRepo.findByIdProduct(id);
+	public ResponseEntity<Optional<Product>> getProductByID(@PathVariable int id) {
+		Optional<Product> product = this.productRepo.findById(id);
 		if (product.isEmpty()) {
 			return ResponseEntity.notFound().build();
 		} else {
@@ -172,8 +174,8 @@ public class StoreController {
 	}
 	
 	@GetMapping(CommonConst.URL_BY_PROMO_ID) // base + "/store" + "/idPromo/{id}"
-	public ResponseEntity<List<Promotion>> getPromoByID(@PathVariable int id) {
-		List<Promotion> promo = this.promoRepo.findByIdPromo(id);
+	public ResponseEntity<Optional<Promotion>> getPromoByID(@PathVariable int id) {
+		Optional<Promotion> promo = this.promoRepo.findById(id);
 		if (promo.isEmpty()) {
 			return ResponseEntity.notFound().build();
 		} else {

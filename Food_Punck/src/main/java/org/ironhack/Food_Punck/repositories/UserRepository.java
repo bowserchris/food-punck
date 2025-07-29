@@ -15,9 +15,8 @@ import jakarta.persistence.Table;
 public interface UserRepository extends JpaRepository<User,Integer> {
 	
 	Optional<User> findByEmail(String email);
-	Optional<User> findByAddress(int idAddress);
+//	Optional<User> findByIdAddress(int idAddress);
 	Optional<User> findByName(String firstName);
 	Optional<User> findByUserName(String userName);
-	List<User> findByIdUser(int idUser);
 
 }

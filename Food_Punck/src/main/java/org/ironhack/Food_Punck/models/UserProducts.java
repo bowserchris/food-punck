@@ -35,7 +35,7 @@ public class UserProducts {
 	private User user;
 	
 	@ManyToOne
-	@JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT, referencedColumnName = CommonConst.MYSQL_ID_PRODUCT) /// reviews.idstore, store.idstore
+	@JoinColumn(name = CommonConst.MYSQL_ID_PRODUCT, referencedColumnName = CommonConst.MYSQL_ID_PRODUCT) /// product.idprodcut, store.idstore
 	private Product product;
 
 }
