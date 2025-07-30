@@ -12,7 +12,7 @@ public class CommonConst {
 	public static final String HOST_START = "localhost:3306/fruit_punk";
 	public static final String ADD_MAPPINGS = "/**"; // CONFIRM WHAT THIS REPRESENTS
 	public static final int MAX_AGE_SITE = 3600; // CONFIRM WHAT THIS REPRESENTS
-	public static final String ALLOWED_ORIGINS = "http://localhost:8080";
+	public static final String ALLOWED_ORIGINS = "https://localhost:9090";
 	public static final String ALLOWED_METHOD_GET = "GET";
 	public static final String ALLOWED_METHOD_POST = "POST";
 	public static final String ALLOWED_METHOD_PUT = "PUT";

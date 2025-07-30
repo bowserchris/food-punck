@@ -1,7 +1,6 @@
 package org.ironhack.Food_Punck.models;
 
 import java.sql.Timestamp;
-import java.util.List;
 
 import org.ironhack.Food_Punck.util.CommonConst;
 
@@ -11,10 +10,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Entity
+@Table(name = "Users")
 public class User {
 
 	@Id
