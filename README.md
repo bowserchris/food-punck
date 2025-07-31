@@ -7,7 +7,7 @@ Food Punck es una aplicacion donde usuarios pueden comparar precios entres sus f
 - [Funcionalidades Principales](#funcionalidades-principales-)
 - [Flujo del app](#flujo-de-food-punck-)
 - [Arrancar el app](#como-arrancar-el-app-como-programador-)
-- [Futuras Mejoras[(#futuras-mejoras-)
+- [Futuras Mejoras](#futuras-mejoras-)
 
 # Objetivos de Food Punck 🍅
 El **Food Punck** es para que un usuario puede comparar precios/pesos entre varias tiendas locales (como fruterías y panaderías) e incluso supermercados. Las tiendas locales podrian ofrecer y notificar a usuarios de las ofertas o cambios de precios que tienen en sus locales, y asi evitar el desgaste de su producto. 
