@@ -1,6 +1,21 @@
 # 🥝🍌🦍🍌🍐 Food Punχ 🍎👊🐵👊🍎
 # 🥦 ¿Que es Food Punck? 🥦
-Food Punck es una aplicacion donde usuarios pueden comparar precios entres sus fruterias/panaderias locales (e incluso supermercados) para ver donde esta la mejor oferta. Es una aplicacion para dar plataforma a los negocios locales y ayuda al ciudadno en vez de buscar la facil solucion conglomerado. Otras funciones seran agregados en su tiempo, miren al apartado [Futuras Mejoras[(#futuras-mejoras-) para mas detalles.
+Food Punck es una aplicacion donde usuarios pueden comparar precios entres sus fruterias/panaderias locales (e incluso supermercados) para ver donde esta la mejor oferta. Es una aplicacion para dar plataforma a los negocios locales y ayuda al ciudadno en vez de buscar la facil solucion conglomerado. Otras funciones seran agregados en su tiempo, miren al apartado [Futuras Mejoras](#futuras-mejoras-) para mas detalles.
+
+### 🍎 ¿Porque Fruit Punχ? 👊
+
+El nombre de la aplicación viene de la combinación **Fruit** y **Punk** con su explicación a continua :
+
+- **Fruit / Food** : **Fruta / Alimentación**. Versiones futuras podrá comparar contra cualquier tipo de productos, no solo de comida.
+- **Punk** : con '**k**' de kilo, empezó como un movimiento cultural a finales de los '70's. Gente de la movida punk normalmente iba en oposición o a contraria de los autoridades o lo que los punks mismos veían como lo 'establecido' o normal de su cultura. No solo en música y ropa, si no muchos aspectos de la vida. 
+- **Punch** : con '**ch**' de churros, **Fruit Punch** es una bebida mezclada de varias frutas y azúcar con 'toque' (a veces fuerte) de alcohol, que se siente como un **punch** (puñetazo) del sabor intenso no esperado del alcohol.
+- **Punck** : es una mezcla entre el **punk** y **punch**, influido por la letra **Chi χ** del alfabeto griego haciendo el sonido '**ch**' de '**k**' fuerte.
+
+De ahí viene **Fruit Punχ**, 🍎👊, un puñetazo de frutas y ayuda no esperada!
+
+**Punk** ademas normalmente se asocia a un futuro negativo/deprimente, por lo menos en lo mas conocido en la cultura popular como el **Cyber Punk** de **Blade Runner** (aunque es una estética chuilisima). 
+
+Sin embargo con **Fruit Punχ** intentaremos enfocar en su actitud anti-sistema establecida y mas en contra de lo normal, porque aunque seas punk no quiere decir que eres anti sociable. Punks tienen sus propios grupos y inclusiones de intereses y nuestro interés es dar herramientas y plataformas al ciudadano y tienda local de Main Street contra el Wall Street, como el **Solar Punk** 🌞 a lo positividad de lo somos capaces en el futuro próximo.
 
 ### Tabla de Contenidos
 - [Objetivos](#objetivos-de-food-punck-)
