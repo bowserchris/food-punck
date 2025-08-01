@@ -1,4 +1,4 @@
-# 🥝🍌🦍🍌🍐 Food Punck 🍎👊🐵👊🍎
+# 🥝🍌🦍🍌🍐 Food Punχ 🍎👊🐵👊🍎
 # 🥦 ¿Que es Food Punck? 🥦
 Food Punck es una aplicacion donde usuarios pueden comparar precios entres sus fruterias/panaderias locales (e incluso supermercados) para ver donde esta la mejor oferta. Es una aplicacion para dar plataforma a los negocios locales y ayuda al ciudadno en vez de buscar la facil solucion conglomerado. Otras funciones seran agregados en su tiempo, miren al apartado [Futuras Mejoras[(#futuras-mejoras-) para mas detalles.
 
@@ -170,11 +170,7 @@ http://localhost:9090
 Si has cambiado el puerto en el archivo `application.properties`, utiliza ese puerto en lugar de 9090. Te debería llevar al indice principal del html del proyecto en:
 
 ```
-https://localhost:9090/food-punck
-
-o
-
-https://localhost:9090/food-punck.html
+https://localhost:9090/foodPunk
 ```
 
 # 🧅 Futuras Mejoras 🧅
