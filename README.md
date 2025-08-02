@@ -1,4 +1,9 @@
 # 🥝🍌🦍🍌🍐 Food Punχ 🍎👊🐵👊🍎
+![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript)
+
 # 🥦 ¿Que es Food Punck? 🥦
 Food Punck es una aplicacion donde usuarios pueden comparar precios entres sus fruterias/panaderias locales (e incluso supermercados) para ver donde esta la mejor oferta. Es una aplicacion para dar plataforma a los negocios locales y ayuda al ciudadno en vez de buscar la facil solucion conglomerado. Otras funciones seran agregados en su tiempo, miren al apartado [Futuras Mejoras](#futuras-mejoras-) para mas detalles.
 
