@@ -23,11 +23,11 @@ De ahí viene **Fruit Punχ**, 🍎👊, un puñetazo de frutas y ayuda no esper
 Sin embargo con **Fruit Punχ** intentaremos enfocar en su actitud anti-sistema establecida y mas en contra de lo normal, porque aunque seas punk no quiere decir que eres anti sociable. Punks tienen sus propios grupos y inclusiones de intereses y nuestro interés es dar herramientas y plataformas al ciudadano y tienda local de Main Street contra el Wall Street, como el **Solar Punk** 🌞 a lo positividad de lo somos capaces en el futuro próximo.
 
 ### Tabla de Contenidos
-- [Objetivos](#objetivos-de-food-punck-)
-- [Funcionalidades Principales](#funcionalidades-principales-)
-- [Flujo del app](#flujo-de-food-punck-)
-- [Arrancar el app](#como-arrancar-el-app-como-programador-)
-- [Futuras Mejoras](#futuras-mejoras-)
+- [Objetivos](#-objetivos-de-food-punck-)
+- [Funcionalidades Principales](#-funcionalidades-principales-)
+- [Flujo del app](#-flujo-de-food-punck-)
+- [Arrancar el app](#-como-arrancar-el-app-como-programador-)
+- [Futuras Mejoras](#-futuras-mejoras-)
 
 # 🍅 Objetivos de Food Punck 🍅
 El **Food Punck** es para que un usuario puede comparar precios/pesos entre varias tiendas locales (como fruterías y panaderías) e incluso supermercados. Las tiendas locales podrian ofrecer y notificar a usuarios de las ofertas o cambios de precios que tienen en sus locales, y asi evitar el desgaste de su producto. 
