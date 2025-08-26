@@ -84,8 +84,10 @@ public class UserController {
 	/// All 6 post mappings ///
 	
 	@PostMapping(CommonConst.URL_ADD_USER) // base + "/user" + "/addUser"
-	public ResponseEntity<User> addStore(@RequestBody User user){
+	public ResponseEntity<User> addUser(@RequestBody User user){
 		if (user != null) {
+			logger.error(user.toString());
+			logger.info(user.toString());
 			return ResponseEntity.ok(this.userRepo.save(user));
 		} else {
 			return ResponseEntity.noContent().build();

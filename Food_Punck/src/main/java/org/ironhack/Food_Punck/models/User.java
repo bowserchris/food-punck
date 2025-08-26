@@ -27,16 +27,22 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id_User")
 	private int id;
+	@Column(nullable = false)
 	private String userName;
+	@Column(nullable = false)
 	private String name;
 	private String lastName1;
 	private String lastName2;
 	private String email;
+	@Column(nullable = false)
 	private String password;
+	@Column(nullable = true)
 	private Timestamp dateCreated;
 	
 	@OneToOne
-	@JoinColumn(name = CommonConst.MYSQL_ID_ADDRESS, referencedColumnName = CommonConst.MYSQL_ID_ADDRESS) // 	user."id_Address",address."id_Address"
+	@JoinColumn(name = CommonConst.MYSQL_ID_ADDRESS, 
+				referencedColumnName = CommonConst.MYSQL_ID_ADDRESS, 
+				nullable = true) // 	user."id_Address",address."id_Address"
 	private Address address;
 	
 //	@ManyToMany

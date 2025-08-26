@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Fruit Punk!</title>
+    <title>Fruit Punk!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
     <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}"/>
 </head>
 <body>
@@ -14,37 +15,54 @@
 <div class="container">
     <div class="box left-hand">
         <button id="createUserBtn">Create User</button>
-        <button id="getUsersBtn">Get Users</button>
+        <button id="getUsersBtn" type="submit">Get Users</button>
     </div>
     <div class="box right-hand">
         <button id="createProductBtn">Create Product</button>
-        <button id="getProductsBtn">Get Products</button>
+        <button id="getProductsBtn" type="submit">Get Products</button>
     </div>
 </div>
 
 <div id="userForm" class="form hidden">
-    <h2>Create User</h2>
-    <input type="text" id="username" placeholder="Name">
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
-    <button id="sendUserBtn">Create</button>
-    <button id="cancelUserBtn">Cancel</button>
+	<form id="popupFormUser" class="form-container">
+	    <h2>Create User</h2>
+	    <input type="text" id="userName" placeholder="User Name" required>
+	    <input type="email" id="email" placeholder="Email">
+	    <input type="password" id="password" placeholder="Password" required>
+	    <input type="text" id="name" placeholder="Name" required>
+	    <input type="text" id="lastName1" placeholder="First Last Name">
+	    <input type="text" id=lastName2 placeholder="Second Last Name">
+	    <button id="sendUserBtn" type="submit">Create</button>
+	    <button id="cancelUserBtn" type="submit" formnovalidate value="Close Popup">Cancel</button>
+	</form>
 </div>
 
 <div id="productForm" class="form hidden">
-    <h2>Create Product</h2>
-    <input type="text" id="productName" placeholder="Product Name">
-    <input type="number" id="productPrice" placeholder="Price">
-    <input type="number" id="productWeight" placeholder="Weight">
-    <button id="sendProductBtn">Create</button>
-    <button id="cancelProductBtn">Cancel</button>
+	<form id="popupFormProduct" class="form-container">
+	    <h2>Create Product</h2>
+	    <input type="text" id="productName" placeholder="Product Name" required> 
+	    <select	id="productType" name="type" required>
+			<option value="FRUIT">Fruit</option>
+			<option value="VEGETABLE">Vegetable</option>
+			<option value="BREAD">Bread</option>
+			<option value="CHEESE">Cheese</option>
+			<option value="MEAT">Meat</option>
+			<option value="OTHER">Other</option>
+		</select> 
+		<input type="number" id="productPrice" placeholder="Price" required>
+	    <input type="number" id="productWeight" placeholder="Weight" required>
+	    <input type="date" id="dateDevlivered" placeholder="Date Delivered" required>
+	    <input type="date" id="dateExpired" placeholder="Date Expires">
+	    <button id="sendProductBtn" type="submit">Create</button>
+	    <button id="cancelProductBtn" type="submit" formnovalidate value="Close Popup">Cancel</button>
+	</form>
 </div>
 
-<div class="list-container">
-    <ul id="userList"></ul>
-    <ul id="productList"></ul>
-</div>
+<table id="productTable" class="table">
+	<thead></thead>
+	<tbody></tbody>
+</table>
 
-<script th:src="@{js/script.js}"></script>
+<script src="js/script.js" th:src="@{/js/script.js}"></script>
 </body>
 </html>
