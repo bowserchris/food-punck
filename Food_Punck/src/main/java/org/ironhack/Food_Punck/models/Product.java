@@ -29,8 +29,9 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id_Product")
+	@Column(name = "id_Product", nullable = false)
 	private int id;
+	@Column(nullable = false)
 	private String name;
 	private ProductType type;
 	private double price;
@@ -66,7 +67,7 @@ public class Product {
 		return this.getPrice();
 	}
 	
-	// Add logic here to call alterPriceWithDiscount when its been applied? Or Above?
+//	 Add logic here to call alterPriceWithDiscount when its been applied? Or Above?
 	public boolean applyDiscountToProduct() {
 		this.setDiscount(true);
 		return this.isDiscount();

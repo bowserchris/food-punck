@@ -6,6 +6,8 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background: linear-gradient(to bottom right, #74DB37, #FFFB70);
+    font-size: 15px;
 }
 
 h1, h2 {
@@ -20,10 +22,15 @@ h1, h2 {
 }
 
 .box {
-    background-color: #f4f4f9;
+    background-color: #FFA270;
     padding: 2rem;
     border-radius: 5px;
     text-align: center;
+    font-size: 15px;
+}
+
+.button {
+	background-color: #70F1FF;
 }
 
 .form {
@@ -37,6 +44,7 @@ h1, h2 {
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 15px; 
 }
 
 .form.hidden {
