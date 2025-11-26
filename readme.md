@@ -1,23 +1,34 @@
-### Introduction
+# 🍎 FRUIT-PUNχ!!! 👊
 
-Fruit Punχ es un app diseñado para comparar precios de productos en tiendas locales y ver cual es la mejor oferta. 
+*to be translated on later date*  
 
-### Project Description
+## Introduction ☕
 
-#### Objetivos del proyecto
+Go ahead and grab a cup o' joe and let me tell you about. Fruit Punχ es un app diseñado para comparar precios de productos en tiendas locales y ver cual es la mejor oferta. 
+
+## Project Description 🧑🏼‍💻
+
+### Objectives 🎯
+
 El **objetivo del proyecto** es para que un usuario puede comparar precios/pesos entre varios sitios de tiendas locales (como fruterías y panaderías) e incluso supermercados para ver donde cual lleva la mejor oferta. 
-#### Funcionalidades principales
+
+### Funcionalidades principales 🍄
+
 Las **funcionalidades principales** del app son:
 - `Users` pueden comparar precios entre 2 productos de 2 tiendas diferentes (o mas)
 - `Users` pueden buscar tiendas y productos por su nombre, código postal o por producto
 - `Users` pueden dar rankings y reviews a tiendas por su servicio y calidad
 - `Stores` pueden notificar de promociones y aplicarlos a productos
-#### Público objetivo.
+
+## Public aim
+
 El objetivo público serian 2 grupos en particular:
+
 1. **Ciudadanos locales** que buscarían las mejores tiendas y mejores ofertas. De esta manera:
 	- Pueden tener una idea clara de como es el mercado local
 	- Podrán ver si por la cantidad ganan mas que el precio individual
 	- Pueden apoyar a las tiendas locales en vez de los supermercados y tiendas corporativas
+	
 2. **Tiendas locales** podrán utilizar la plataforma:
 	- En vez de crear su propia pagina web individual, que cuesta tiempo, dinero y habilidad, podrá haber un sitio central para que las tiendas y usuarios pueden revisar y comparar entre todos. 
 	- Da una vista amplia a las tiendas locales a clientes nuevos, de esta manera podrán defenderse de los monopolios corporativas que dominan acceso a clientes por su nombre corporativo.
@@ -27,13 +38,17 @@ El objetivo público serian 2 grupos en particular:
 	- Desglosar si son productos ecológicos
 
 
-### Planning & Resources
+## Planning & Resources
 
-#### Phases:
+### Phases:
 
-#### Versions checklist:
+*to be elaborated on*
 
-#### Dependencies
+### Versions checklist:
+
+*to be elaborated on*
+
+### Dependencies
 - *spring-boot-starter-data-jpa* / para utilizar JPA repositorios con MySQL
 - *spring-boot-starter-jdbc* / para conexiones de BBDD
 - *spring-boot-starter-web* / para crear conexiones de internet con el app
@@ -43,13 +58,12 @@ El objetivo público serian 2 grupos en particular:
 - *spring-boot-starter-security* / para implementar seguirdad y HTTPS
 - *springdoc-openapi-starter-webmvc-ui* / para documentar el codigo
 
-### Design
+## Design
 
-Below is a general overview of a flowchart for the version 1.0.0 of Fruit Punχ.
+*to be further elaborated on*
 
-![[11 Fruit Punck Overview.png]]
+### App flow
 
-#### El Flow del Programa
 1. **Fruit Punχ** empezara con el [[#1. Login del Usuario y Tienda|Start Login]] y ira en 2 caminos
 	1. Llegara al **Indice del Usuario** y decidirá que opción hacer:
 		1. **Opción 1** - empezara la [[#2. Usuario buscando productos por nombre, tienda o codigo postal|Búsqueda de Products]] 
@@ -66,10 +80,11 @@ Below is a general overview of a flowchart for the version 1.0.0 of Fruit Punχ.
 			1. Si no tiene **promociones** creados se redirige a [[#8. Tienda crea promociones y los aplica a productos|opción 2]]
 		4. **Opción 4** - la **tienda** puede [[#10. Tienda revisa sus reseñas|revisar sus reseñas]] que le han hecho **usuarios**
 
+## Roadmap
 
-### Roadmap
+### Features/Wishlist to update
 
-##### Mejoras o Actualizaciones inmediatas para Fruit Punχ v1
+#### Version 1
 
 Aquí esta un listado de las mejoras necesarias para incrementar la funcionalidad del app, o los bugs que faltan por eliminar:
 
@@ -93,7 +108,8 @@ Aquí esta un listado de las mejoras necesarias para incrementar la funcionalida
 
 - [ ] **Permitir a las tiendas enviar notificaciones en masa:**
 	Crear una clase y sistema de distribución que les permita a las tiendas enviar mensajes o promociones a sus clientes, facilitando el marketing y la comunicación con los usuarios.
-##### Version 2 - Incorporar `Recipe`
+
+#### Version 2 - Incorporate `Recipe`
 
 En la siguiente version del app implementaremos una funcionalidad donde el `User` puede tener, crear o guardar `Recipe` y tener una lista de un inventario personal de `Product` en casa. La funcionalidad principal seria:
 - El `User` tendría `Recipes`
@@ -124,7 +140,8 @@ El listado para implementar estas funciones siguen a continuación:
 
 - [ ] **Cómo calcular correctamente entre un artículo individual y uno con peso diferente al mismo producto y aplicar el precio por su peso total:**
 	Desarrollar una fórmula que permita calcular el precio de productos basados en la cantidad y el peso, asegurando que los cálculos reflejen correctamente el valor del producto.
-##### Version 3 - Incorporar `Images` y `PhotoInterface`
+
+#### Version 3 - Incorporate `Images` y `PhotoInterface`
 
 En version 3 el plan de incorporar en el app es que en vez de introducir la información de los productos manualmente, el `User` o `Store` podría introducir esa información al sacar una foto, y el app desde la foto sacar la información relevante. Las funciones necesarias serian a continuación:
 
