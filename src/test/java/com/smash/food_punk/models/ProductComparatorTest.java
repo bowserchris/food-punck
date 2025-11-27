@@ -1,0 +1,66 @@
+/**
+ * @author bowserchris
+ */
+package com.smash.food_punk.models;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.springframework.boot.test.context.SpringBootTest;
+
+/**
+ * Test class for ProductComparator
+ */
+@DisplayName("Test product comparisons")
+@SpringBootTest
+public class ProductComparatorTest {
+
+	static Stream<Arguments> testMatchingProducts() {
+
+		Product sweetApple1 = new Product("Granny Smith Apple", 1.5);
+		Product sweetApple2 = new Product("Granny Smith Apple", 1.5);
+		Product iPhone1 = new Product("iPhone 15", 1200.00);
+		Product iPhone2 = new Product("iPhone 15", 1200.00);
+		Product pineapple1 = new Product("Sweet Pineapple", 2.75);
+		Product pineapple2 = new Product("Sweet Pineapple", 2.75);
+
+		return Stream.of(Arguments.of(sweetApple1, sweetApple2), Arguments.of(iPhone1, iPhone2),
+				Arguments.of(pineapple1, pineapple2));
+	}
+
+	static Stream<Arguments> testNonMatchingProducts() {
+
+		Product sweetApple1 = new Product("Granny Smith Apple", 1.5);
+		Product sweetApple2 = new Product("Sour Apple", 1.5);
+		Product iPhone1 = new Product("iPhone 15", 1200.00);
+		Product iPhone2 = new Product("iPhone 12", 999.99);
+		Product pineapple1 = new Product("Sweet Pineapple", 2.75);
+		Product pineapple2 = new Product("Sour Pineapple", 1.55);
+
+		return Stream.of(Arguments.of(sweetApple1, sweetApple2), Arguments.of(iPhone1, iPhone2),
+				Arguments.of(pineapple1, pineapple2));
+	}
+
+	@DisplayName("Should return true on all comparisons")
+	@ParameterizedTest(name = "{0}")
+	@MethodSource("testMatchingProducts")
+	public void compare2SameProductsEqualSuccessTest(Product product1, Product product2) {
+		ProductComparator pc = new ProductComparator();
+		assertEquals(1, pc.compare(product1, product2));
+	}
+
+	@DisplayName("Should return false on all comparisons")
+	@ParameterizedTest(name = "{0}")
+	@MethodSource("testNonMatchingProducts")
+	public void compare2DifferentProductsNotEqualSuccessTest(Product product1, Product product2) {
+		ProductComparator pc = new ProductComparator();
+		assertNotEquals(1, pc.compare(product1, product2));
+	}
+
+}

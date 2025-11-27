@@ -16,6 +16,6 @@ import lombok.NoArgsConstructor;
 public class Product {
 
 	private String name;
-	private float price;
+	private double price;
 
 }
