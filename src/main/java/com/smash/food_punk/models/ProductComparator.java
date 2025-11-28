@@ -5,9 +5,12 @@ package com.smash.food_punk.models;
 
 import java.util.Comparator;
 
+import lombok.NoArgsConstructor;
+
 /**
  * Class that will compare attributes between 2 products and return a result
  */
+@NoArgsConstructor
 public class ProductComparator implements Comparator<Product> {
 
 	@Override
