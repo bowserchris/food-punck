@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -42,23 +43,31 @@ public class ProductComparatorTest {
 //				Arguments.of(pineapple1, pineapple2));
 //	}
 
+	// Compare results are -1 the object is less than, 0 both are equals, 1 is
+	// greater than the other.
+
 //	@DisplayName("Should return true on all comparisons")
 //	@ParameterizedTest(name = "{0}")
 //	@MethodSource("testMatchingProducts")
+	@Test
 	public void compare2SameProductsEqualSuccessTest() {
 		Product sweetApple1 = new Product("Granny Smith Apple", 1.5);
 		Product sweetApple2 = new Product("Granny Smith Apple", 1.5);
 		ProductComparator pc = new ProductComparator();
 		System.out.println(pc.compare(sweetApple1, sweetApple2));
-		assertEquals(1, pc.compare(sweetApple1, sweetApple2));
+		assertEquals(0, pc.compare(sweetApple1, sweetApple2));
 	}
 
 //	@DisplayName("Should return false on all comparisons")
 //	@ParameterizedTest(name = "{0}")
 //	@MethodSource("testNonMatchingProducts")
-	public void compare2DifferentProductsNotEqualSuccessTest(Product product1, Product product2) {
+	@Test
+	public void compare2DifferentProductsNotEqualSuccessTest() {
+		Product sweetApple1 = new Product("Granny Smith Apple", 1.5);
+		Product sweetApple2 = new Product("Sour Apple", 1.5);
+
 		ProductComparator pc = new ProductComparator();
-		assertNotEquals(1, pc.compare(product1, product2));
+		assertNotEquals(1, pc.compare(sweetApple1, sweetApple2));
 	}
 
 }
