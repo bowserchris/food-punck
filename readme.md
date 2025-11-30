@@ -1,14 +1,24 @@
 # 🍎 FRUIT-PUNχ!!! 👊
 
 *to be translated on later date*  
+**Table of Contents:**
+- [Intro](#introduction)
+- [Project Description](#project-description)
+- [Public Aim](#public-aim)
+- [Planning Resources](#planning-resources)
+- [Design](#design)
+- [Roadmap](#roadmap)
+	- [Version 1](#version-1)
+	- [Version 2](#version-2)
+	- [Version 3](#version-3)
 
 ## Introduction ☕
 
 Go ahead and grab a cup o' joe and let me tell you about. Fruit Punχ es un app diseñado para comparar precios de productos en tiendas locales y ver cual es la mejor oferta. 
 
-## Project Description 🧑🏼‍💻
+## Project Description 🥫
 
-### Objectives 🎯
+### Objectives 🍥
 
 El **objetivo del proyecto** es para que un usuario puede comparar precios/pesos entre varios sitios de tiendas locales (como fruterías y panaderías) e incluso supermercados para ver donde cual lleva la mejor oferta. 
 
@@ -20,7 +30,7 @@ Las **funcionalidades principales** del app son:
 - `Users` pueden dar rankings y reviews a tiendas por su servicio y calidad
 - `Stores` pueden notificar de promociones y aplicarlos a productos
 
-## Public aim
+## Public aim 🍭
 
 El objetivo público serian 2 grupos en particular:
 
@@ -38,17 +48,17 @@ El objetivo público serian 2 grupos en particular:
 	- Desglosar si son productos ecológicos
 
 
-## Planning & Resources
+## Planning & Resources 🍴
 
-### Phases:
-
-*to be elaborated on*
-
-### Versions checklist:
+### Phases: 🥞
 
 *to be elaborated on*
 
-### Dependencies
+### Versions checklist: 🍟
+
+*to be elaborated on*
+
+### Dependencies 🦑
 - *spring-boot-starter-data-jpa* / para utilizar JPA repositorios con MySQL
 - *spring-boot-starter-jdbc* / para conexiones de BBDD
 - *spring-boot-starter-web* / para crear conexiones de internet con el app
@@ -58,11 +68,11 @@ El objetivo público serian 2 grupos en particular:
 - *spring-boot-starter-security* / para implementar seguirdad y HTTPS
 - *springdoc-openapi-starter-webmvc-ui* / para documentar el codigo
 
-## Design
+## Design 🍱
 
 *to be further elaborated on*
 
-### App flow
+### App flow 🍷
 
 1. **Fruit Punχ** empezara con el [[#1. Login del Usuario y Tienda|Start Login]] y ira en 2 caminos
 	1. Llegara al **Indice del Usuario** y decidirá que opción hacer:
@@ -80,11 +90,11 @@ El objetivo público serian 2 grupos en particular:
 			1. Si no tiene **promociones** creados se redirige a [[#8. Tienda crea promociones y los aplica a productos|opción 2]]
 		4. **Opción 4** - la **tienda** puede [[#10. Tienda revisa sus reseñas|revisar sus reseñas]] que le han hecho **usuarios**
 
-## Roadmap
+## Roadmap 🍢
 
-### Features/Wishlist to update
+### Features/Wishlist to update 🍨
 
-#### Version 1
+#### Version 1 🍅
 
 Aquí esta un listado de las mejoras necesarias para incrementar la funcionalidad del app, o los bugs que faltan por eliminar:
 
@@ -109,7 +119,9 @@ Aquí esta un listado de las mejoras necesarias para incrementar la funcionalida
 - [ ] **Permitir a las tiendas enviar notificaciones en masa:**
 	Crear una clase y sistema de distribución que les permita a las tiendas enviar mensajes o promociones a sus clientes, facilitando el marketing y la comunicación con los usuarios.
 
-#### Version 2 - Incorporate `Recipe`
+#### Version 2 🥓
+
+##### Incorporate `Recipe` 
 
 En la siguiente version del app implementaremos una funcionalidad donde el `User` puede tener, crear o guardar `Recipe` y tener una lista de un inventario personal de `Product` en casa. La funcionalidad principal seria:
 - El `User` tendría `Recipes`
@@ -141,7 +153,9 @@ El listado para implementar estas funciones siguen a continuación:
 - [ ] **Cómo calcular correctamente entre un artículo individual y uno con peso diferente al mismo producto y aplicar el precio por su peso total:**
 	Desarrollar una fórmula que permita calcular el precio de productos basados en la cantidad y el peso, asegurando que los cálculos reflejen correctamente el valor del producto.
 
-#### Version 3 - Incorporate `Images` y `PhotoInterface`
+#### Version 3 🍔
+
+##### Incorporate `Images` y `PhotoInterface` 
 
 En version 3 el plan de incorporar en el app es que en vez de introducir la información de los productos manualmente, el `User` o `Store` podría introducir esa información al sacar una foto, y el app desde la foto sacar la información relevante. Las funciones necesarias serian a continuación:
 
