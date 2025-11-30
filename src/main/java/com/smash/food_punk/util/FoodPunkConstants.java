@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  * Constants class for the Fruit Punk app
  */
 @NoArgsConstructor
-public class FruitPunkConstants {
+public class FoodPunkConstants {
 
 
 }
