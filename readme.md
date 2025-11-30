@@ -4,7 +4,7 @@
 **Table of Contents:**
 - [Intro](#introduction)
 - [Project Description](#project-description)
-- [Public Aim](#public-main)
+- [Public Aim](#public-aim)
 - [Planning Resources](#planning-resources)
 - [Design](#design)
 - [Roadmap](#roadmap)
@@ -119,7 +119,9 @@ Aquí esta un listado de las mejoras necesarias para incrementar la funcionalida
 - [ ] **Permitir a las tiendas enviar notificaciones en masa:**
 	Crear una clase y sistema de distribución que les permita a las tiendas enviar mensajes o promociones a sus clientes, facilitando el marketing y la comunicación con los usuarios.
 
-#### Version 2 - Incorporate `Recipe` 🥓
+#### Version 2 🥓
+
+##### Incorporate `Recipe` 
 
 En la siguiente version del app implementaremos una funcionalidad donde el `User` puede tener, crear o guardar `Recipe` y tener una lista de un inventario personal de `Product` en casa. La funcionalidad principal seria:
 - El `User` tendría `Recipes`
@@ -151,7 +153,9 @@ El listado para implementar estas funciones siguen a continuación:
 - [ ] **Cómo calcular correctamente entre un artículo individual y uno con peso diferente al mismo producto y aplicar el precio por su peso total:**
 	Desarrollar una fórmula que permita calcular el precio de productos basados en la cantidad y el peso, asegurando que los cálculos reflejen correctamente el valor del producto.
 
-#### Version 3 - Incorporate `Images` y `PhotoInterface` 🍔
+#### Version 3 🍔
+
+##### Incorporate `Images` y `PhotoInterface` 
 
 En version 3 el plan de incorporar en el app es que en vez de introducir la información de los productos manualmente, el `User` o `Store` podría introducir esa información al sacar una foto, y el app desde la foto sacar la información relevante. Las funciones necesarias serian a continuación:
 

@@ -81,8 +81,13 @@
 		    <artifactId>spring-boot-starter-test</artifactId>
 		    <scope>test</scope>
 		</dependency>
+<!--	dependency for EqualsBuilder method						-->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		</dependency>   
 	</dependencies>
-<!--                                                               -->
+<!--															-->
 	<build>
 		<plugins>
 			<plugin>
