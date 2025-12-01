@@ -1,7 +1,7 @@
-# 🍎 FRUIT-PUNχ!!! 👊
+# 🍎 FRUIT-PUNχ!!! 👊  
+---
 
-*to be translated on later date*  
-**Table of Contents:**
+## Table of Contents  
 - [Intro](#introduction)
 - [Project Description](#project-description)
 - [Public Aim](#public-aim)
@@ -12,157 +12,158 @@
 	- [Version 2](#version-2)
 	- [Version 3](#version-3)
 
-## Introduction ☕
+---
 
-Go ahead and grab a cup o' joe and let me tell you about. Fruit Punχ es un app diseñado para comparar precios de productos en tiendas locales y ver cual es la mejor oferta. 
+## Introduction ☕  
+Go ahead and grab a cup o' joe and let me tell you about **Fruit Punχ**. **Fruit Punχ** is an app designed to compare prices of products in local stores and identify where the best deals are.
 
-## Project Description 🥫
+---
 
-### Objectives 🍥
+## Project Description 🥫  
 
-El **objetivo del proyecto** es para que un usuario puede comparar precios/pesos entre varios sitios de tiendas locales (como fruterías y panaderías) e incluso supermercados para ver donde cual lleva la mejor oferta. 
+### Objectives 🍥  
 
-### Funcionalidades principales 🍄
+The goal of this project is for users to compare prices/weights between various local stores (butchers, bakeries & fruit stands) as well as supermarkets, allowing them to find the best offers or better value for specific items.
 
-Las **funcionalidades principales** del app son:
-- `Users` pueden comparar precios entre 2 productos de 2 tiendas diferentes (o mas)
-- `Users` pueden buscar tiendas y productos por su nombre, código postal o por producto
-- `Users` pueden dar rankings y reviews a tiendas por su servicio y calidad
-- `Stores` pueden notificar de promociones y aplicarlos a productos
+### Main Features 🍄  
+The app's main features include:
+- `**Users**` can compare prices between two products from different stores or more.
+- `**Users**` can search for stores and products by name, ZIP code, or product category.
+- `**Users**` can rate and review stores based on their service and quality.
+- `**Stores**` can notify customers of promotions and apply them to specific products.
 
-## Public aim 🍭
+## Public Goal 🍭  
+The public goal targets two specific groups:
 
-El objetivo público serian 2 grupos en particular:
+1. **Local Citizens** who want to find the best local stores with the best deals, enabling them to:
+   - Gain a clear understanding of the local market
+   - Identify if buying in bulk offers better value than individual pricing
+   - Assist local businesses in competing with big chains
 
-1. **Ciudadanos locales** que buscarían las mejores tiendas y mejores ofertas. De esta manera:
-	- Pueden tener una idea clara de como es el mercado local
-	- Podrán ver si por la cantidad ganan mas que el precio individual
-	- Pueden apoyar a las tiendas locales en vez de los supermercados y tiendas corporativas
-	
-2. **Tiendas locales** podrán utilizar la plataforma:
-	- En vez de crear su propia pagina web individual, que cuesta tiempo, dinero y habilidad, podrá haber un sitio central para que las tiendas y usuarios pueden revisar y comparar entre todos. 
-	- Da una vista amplia a las tiendas locales a clientes nuevos, de esta manera podrán defenderse de los monopolios corporativas que dominan acceso a clientes por su nombre corporativo.
-	- Promocionar productos cerca de caducidad
-	- Promocionar ofertas distintas
-	- Desglosar si son productos locales
-	- Desglosar si son productos ecológicos
+2. **Local Stores** can utilize the platform:
+   - Instead of creating their own individual websites, which is costly and time-consuming, they can use a decentralized platform for both store owners and users to browse and compare options.
+   - Promote products nearing expiration dates.
+   - Run special promotions tailored to attract customers.
+   - Highlight whether items are locally sourced or organic.
+   - Attract new customers by showcasing the benefits of local businesses over corporate chains.
+
+---
+
+## Planning & Resources 🍴  
+
+### Phases: 🥞  
+
+*(to be elaborated on later)*
+
+### Version Checklists: 🍟  
+
+*(to be elaborated on later)*
+
+### Dependencies 🦑  
+- `**spring-boot-starter-data-jpa**`: To use JPA repositories with MySQL.
+- `**spring-boot-starter-jdbc**`: For database connections.
+- `**spring-boot-starter-web**`: To establish internet connections for the app.
+- `**mysql-connector-j**`: To communicate with MySQL databases.
+- `**spring-boot-starter-test**`: For testing classes and methods.
+- `**spring-boot-starter-thymeleaf**`: To visualize HTML and CSS templates.
+- `**spring-boot-starter-security**`: To implement security measures and HTTPS.
+- `**springdoc-openapi-starter-webmvc-ui**`: To document the code.
+
+---
+
+## Design 🍱  
 
 
-## Planning & Resources 🍴
+### App Flow 🍷
 
-### Phases: 🥞
+1. **Fruit Punχ** begins with the **User/Store Login Process** and proceeds in two directions:
 
-*to be elaborated on*
+	2. Upon arriving at the **User Index**, the user chooses between:
+		1. **Searching for Products** by name, store, or ZIP code
+		2. Checking the **Stores they're Following**
+			1. If they have stores saved, then can **write reviews**
+		3. **Write reviews** on stores
+		4. **Create a product list** to compare in between them
+		5. **Review past results** from previous comparisons
+		6. If the `**User**` hasn't implemented any of the previous options, they're immediately sent to the `search products` section
+		
+	3. Upon arriving at the **Store Index**, the store chooses between:
+		1. **Create and add** products to their inventory
+		2. **Create and add** promotions to products
+		3. **Create and send** notifications to `**Users**` that are following them.
+			1. If the `**Store**` doesn't have any promotions created, automatically get sent to option 2.
+		4. **Review and reply** to reviews sent by `**Users**`
 
-### Versions checklist: 🍟
+---
 
-*to be elaborated on*
+### Roadmap 🍢   
 
-### Dependencies 🦑
-- *spring-boot-starter-data-jpa* / para utilizar JPA repositorios con MySQL
-- *spring-boot-starter-jdbc* / para conexiones de BBDD
-- *spring-boot-starter-web* / para crear conexiones de internet con el app
-- *mysql-connector-j* / para poder comunicar con BBDD MySQL
-- *spring-boot-starter-test* / para poder hacer clases de testing
-- *spring-boot-starter-thymeleaf* / para poder visualizer HTML y CSS
-- *spring-boot-starter-security* / para implementar seguirdad y HTTPS
-- *springdoc-openapi-starter-webmvc-ui* / para documentar el codigo
-
-## Design 🍱
-
-*to be further elaborated on*
-
-### App flow 🍷
-
-1. **Fruit Punχ** empezara con el [[#1. Login del Usuario y Tienda|Start Login]] y ira en 2 caminos
-	1. Llegara al **Indice del Usuario** y decidirá que opción hacer:
-		1. **Opción 1** - empezara la [[#2. Usuario buscando productos por nombre, tienda o codigo postal|Búsqueda de Products]] 
-		2. **Opción 2** - mirara las [[#3. Usuario "siguiendo" una Tienda|Tiendas que sigue]] el **usuario**
-			1. Si tiene **tiendas**, puede crear **reseñas** de ellos y ir a **opción 3**
-		3. **Opción 3** - **usuario** [[#4. Usuario crea una reseña|crea reseñas]]
-		4. **Opción 4** - **usuario** [[#5. Usuario crea una lista de productos|crea listas de productos]]
-		5. **Opción 5**  - **usuario** revisa sus **resultados** y sino salta directo a **Opción 6** [[#6. Usuario compara productos|a comparar productos]]
-		6. Si el **usuario** no tiene algo dentro de las **opciones 2-6**, va directo a [[#2. Usuario buscando productos por nombre, tienda o codigo postal|buscar productos]]
-	2. Llegará al **Indice de la Tienda** y decidirá que opción hacer:
-		1. **Opción 1** - la **tienda** puede [[#7. Tienda crea y añade productos a su inventario|crear y añadir productos]]  a su **inventario**
-		2. **Opción 2** - la **tienda** puede [[#8. Tienda crea promociones y los aplica a productos|crear y añadir promociones]] a sus **productos**
-		3. **Opción 3** - la **tienda** puede [[#9. Tienda hace notificaciones de sus productos|mandar notificaciones]] a **usuarios**
-			1. Si no tiene **promociones** creados se redirige a [[#8. Tienda crea promociones y los aplica a productos|opción 2]]
-		4. **Opción 4** - la **tienda** puede [[#10. Tienda revisa sus reseñas|revisar sus reseñas]] que le han hecho **usuarios**
-
-## Roadmap 🍢
-
-### Features/Wishlist to update 🍨
+### Features/Wishlist to Update 🍨
 
 #### Version 1 🍅
 
-Aquí esta un listado de las mejoras necesarias para incrementar la funcionalidad del app, o los bugs que faltan por eliminar:
+Here’s a list of improvements needed to enhance the app's functionality or bugs that need fixing:
 
-- [ ] **Buscar por código postal y ver en Mapa**
-	Utilizar geo-localización y APIs de búsqueda para identificar las fruterías más cercanas al código postal del usuario o buscado. Mostrar un mapa con los precios actualizados de estos productos.
+- [ ] **Search by ZIP Code and View on Map**: 
+	- [ ] Utilize geolocation APIs to identify nearby fruit stands or stores based on the user's ZIP code
+	- [ ] Display a map with updated prices for these products.
 
-- [ ] `Store` **podran notificar a usuarios un aviso general de ofertas**
-	Implementar una funcionalidad que permita a los dueños de las tiendas crear y gestionar promociones específicas. Envío de notificaciones masivas a los clientes para alertar sobre ofertas especiales.
+- [ ] **Stores Can Send General Notifications**: 
+	- [ ] Implement a feature allowing store owners to create and manage promotions 
+	- [ ] Sending bulk notifications to customers about special offers.
 
-- [ ] **Perfiles de tiendas utilizando proveedores locales:**
-	Crear un sistema que identifique y muestra las tiendas que utilizan productos locales, facilitando la búsqueda de opciones más sustentables.
+- [ ] **Store Profiles Using Local Providers**: Create a system to identify and display stores that use local ingredients, making it easier for users to find sustainable options.
 
-- [ ] **Perfiles de tiendas con productos orgánicos:**
-	Similar a lo anterior, pero se enfoca específicamente en productos orgánicos. Ayudar a los usuarios a encontrar y comprar productos frescos y naturales.
+- [ ] **Store Profiles with Organic Products**: Similar to the above, but specifically focus on organic products. Help users find fresh and natural products.
 
-- [ ] **Incorporar una funcionalidad de inicio de sesión (login):**
-	Implementar autenticación para usuarios y tiendas, permitiendo un seguimiento personalizado del inventario, preferencias y pedidos.
+- [ ] **Implement User Login (Authentication)**: Develop authentication for both users and stores. Allow personalized tracking of inventory, preferences, and orders.
 
-- [ ] **Permitir a las tiendas responder a reseñas (creación de clase de mensaje):**
-	Desarrollar una interfaz que le permita a los usuarios dejar reseñas y opiniones sobre productos. Implementar un sistema de moderación para mantener la calidad del contenido.
+- [ ] **Allow Stores to Respond to Reviews**: Build an interface where users can leave reviews and opinions about products. Implement a moderation system to maintain content quality.
 
-- [ ] **Permitir a las tiendas enviar notificaciones en masa:**
-	Crear una clase y sistema de distribución que les permita a las tiendas enviar mensajes o promociones a sus clientes, facilitando el marketing y la comunicación con los usuarios.
+- [ ] **Product Search by Name, Store, or ZIP Code**: Enhance the search functionality to allow users to find products more efficiently based on various criteria.
 
-#### Version 2 🥓
+- [ ] **Following Stores**: Implement a feature where users can track or follow specific stores to receive updates on new products and promotions.
 
-##### Incorporate `Recipe` 
+- [ ] **Creating Product Lists**: Allow users to create custom product lists for easier organization and comparison.
 
-En la siguiente version del app implementaremos una funcionalidad donde el `User` puede tener, crear o guardar `Recipe` y tener una lista de un inventario personal de `Product` en casa. La funcionalidad principal seria:
-- El `User` tendría `Recipes`
-- El `User` tendría un inventario de `Product` para su stock en casa
-- El `User` podría comparar productos que tiene en su inventario con recetas que tiene guardado y le podría notificar:
-	- Que productos le faltan y la cantidad
-	- Que productos pronto estarán por caducarse y ofrecer recetas con esos ingredientes
+- [ ] **Viewing Results**: Ensure that the search and comparison results are displayed in an organized and user-friendly manner.
 
-El listado para implementar estas funciones siguen a continuación:
+- [ ] **Comparing Products**: Develop a feature where users can directly compare prices, specifications, and reviews of different products side by side.
 
-- [ ] **Calcular el stock que tienes en casa:**
-	Utilizando el inventario del `User` y comparando con los ingredientes del `Recipe` el app procesara esta información para determinar cuántos productos le faltan para terminar la receta. Al mismo tiempo, implementar una función que avise a los usuarios sobre cualquier producto que esté por vencer.
+- [ ] **Product Profile Pic** Users or stores and upload profile pics for their products. Otherwise by default have a generic photo in place for the type of product (fruit can be an apple, veggies - lettuce, baked goods - bread, etc.)
 
-- [ ] **Guardar recetas como Usuario:**
-	`User` puede crear sus propios recetas, guardarlas de un enlace URL o si tiene listas de recetas incorporarlas directamente.
+#### Version 2
 
-- [ ] **Recetas puede dar recomendaciones**:
-	`Recipe` puede ser enlazado con el `Product` stock que tiene un `User` en su casa. De esta manera puede recomendar recetas de las siguientes maneras:
-	- [ ] Productos que están cerca de caducarse, y que recetas las utilizan
-	- [ ] Si elijes una receta, reflejara lo que tiene o no tiene el `User` en su stock en casa
-		- [ ] De ahí creara una lista de compras de los productos que falta, con la cantidad necesaria
+**Incorporate "Recipes":**
 
-- [ ] **Aplicar diferentes divisas abstractamente (no codificarlas directamente):**
-	Desarrollar un sistema flexible para manejar múltiples divisas, permitiendo que los usuarios elijan su moneda peso, etc de una manera no predeterminada. Asegurar que todos los cálculos se realicen en la moneda seleccionada.
+In the next version of the app, the goal is to implement a functionality where users can create or save recipes and track their home inventory. The main functionality includes:
 
-- [ ] **Aplicar diferentes medidas y afectar el precio de manera diferente (por unidad, peso en kilogramos, volumen en litros, etc):**
-	Implementar una funcionalidad que maneje diferentes tipos de medidas para los productos, adaptando automáticamente el cálculo del precio según la medida seleccionada.
+- [ ] **User Recipes**: Users can have saved recipes.
+- [ ] **Personal Inventory**: Users can keep track of products they have at home (no need for full inventory).
+- [ ] **Recipe Comparison**: The user can compare products in their inventory with the ingredients of saved recipes, as well as receive:
+	- [ ] **Notifications**: Notify users when:
+		- [ ] Products are missing and how much is needed.
+		- [ ] Products are expiring soon, suggesting recipes that use those ingredients.
+  
+**Implementation Steps:**
 
-- [ ] **Cómo calcular correctamente entre un artículo individual y uno con peso diferente al mismo producto y aplicar el precio por su peso total:**
-	Desarrollar una fórmula que permita calcular el precio de productos basados en la cantidad y el peso, asegurando que los cálculos reflejen correctamente el valor del producto.
+- [ ] **Calculate Stock at Home**: Using the user's inventory and comparing it with recipe ingredients, the app will process this information to determine which products are lacking for completing a recipe. Additionally, implement a function to inform users about any product nearing expiration.
+- [ ] **Save Recipes as User**: Users can create their own recipes or save them from a URL or pre-existing lists.
+- [ ] **Recipe Recommendations**: Recipes can be linked with the user's home inventory. Recommendations will include:
+	- [ ] Products that are close to expiring and used in recipes.
+	- [ ] If a recipe is chosen, it will reflect what the user has or doesn't have in their stock at home.
+		- [ ] With that info it will generate a shopping list of needed products along with required quantities.
+		- [ ] Can be exported into other apps or as `markdown` for checklists.
+- [ ] **Apply Different Currencies Abstractly**: Develop a flexible system to manage multiple currencies, allowing users to choose their preferred currency without direct encoding. Ensure all calculations are performed in the selected currency.
+- [ ] **Apply Different Measures and Affect Prices Differently**: Implement functionality that handles various types of measurements (e.g., weight in kilograms/pounds, volume in liters/gallons) and adjusts prices accordingly.
 
-#### Version 3 🍔
+#### Version 3
 
-##### Incorporate `Images` y `PhotoInterface` 
+**Incorporate "Images" and "PhotoInterface":**
 
-En version 3 el plan de incorporar en el app es que en vez de introducir la información de los productos manualmente, el `User` o `Store` podría introducir esa información al sacar una foto, y el app desde la foto sacar la información relevante. Las funciones necesarias serian a continuación:
+For Version 3, the plan is to allow users or stores to input product information by taking a photo, with the app automatically extracting relevant details using OCR (Optical Character Recognition). The necessary functionalities include:
 
-- [ ] **Sacar fotos de productos y automatizar la información de la foto:** 
-	Implementar una funcionalidad que utilice OCR (Reconocimiento Última Origen del Carácter) para extraer información como el nombre, peso y precio de las imágenes de productos (o ISBN si se puede). Esta información se puede almacenar en la base de datos para su posterior uso en comparaciones y recomendaciones.
-	- [ ] Crear clase `Image` y tabla
-	- [ ] Crear clase y implementacion de `PhotoInterface`
-
-- [ ] **Coger información de un producto por su ISBN**
-	Integrar una API que proporcione datos de caducidad, y otra información, basados en los códigos ISBN de los productos. De esta manera automatizar y rellenar el formulario del producto y no introducirlo manualmente. Ademas si el ISBN tiene la información correcta, comparar estos datos con la fecha actual para alertar a los usuarios sobre cualquier producto que esté por vencer.
+- [ ] **Extract Product Information from Photos**: Implement a functionality that uses OCR to extract information like names, weights, and prices from product images. This information can be stored in a database for later use in comparisons and recommendations.
+	- [ ] **Create "Image" Class and Table**: Establish a class and implementation for images.
+	- [ ] **Create PhotoInterface**: Create an interface that can incorporate different types of cameras/phones as inputs and images.
+- [ ] **Retrieve Information by ISBN**: Integrate an API that provides data on expiration dates and other relevant details based on product ISBNs. This will allow automatic form filling without manual entry. If the ISBN contains accurate information, compare it with the current date to alert users about expiring products. **NEEDS FURTHER INVESTIGATION ON WHAT ISBN CAN AND CAN'T DO**
