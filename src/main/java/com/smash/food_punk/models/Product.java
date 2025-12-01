@@ -12,13 +12,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Class representing a product or item
+ * Class representing a product/item
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class Product {
 
+	private int id;
 	private String name;
 	private double price;
 
@@ -37,7 +38,7 @@ public class Product {
 		// want to see the difference
 		// EqualsBuilder used to easily update and add new lines to product when needed
 		Product other = (Product) obj;
-		return new EqualsBuilder().append(this.name, other.getName())
+		return new EqualsBuilder().append(this.id, other.getId()).append(this.name, other.getName())
 				.append(Double.doubleToLongBits(this.price), Double.doubleToLongBits(other.getPrice())).isEquals();
 	}
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fruit Punχ!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<h1>Welcome to Fruit Punk</h1>
+<h2>What would you like to do?</h2>
+
+<div class="container">
+<!--     <div class="box right-hand">  -->
+        <button id="createProductBtn">Create Product</button>
+<!--         <button id="getProductsBtn" type="submit">Get Products</button> -->
+<!--      </div> -->
+</div>
+
+<div id="productForm" class="form hidden">
+	<form id="popupFormProduct" class="form-container">
+	    <h2>Create Product</h2>
+	    <input type="text" id="productName" placeholder="Product Name" required> 
+		<input type="number" id="productPrice" placeholder="Price" required>
+	    <button id="sendProductBtn" type="submit">Create</button>
+	    <button id="cancelProductBtn" type="submit" formnovalidate value="Close Popup">Cancel</button>
+	</form>
+</div>
+
+<table id="productTable" class="table">
+	<thead></thead>
+	<tbody></tbody>
+</table>
+
+<script src="js/script.js" th:src="@{/js/script.js}"></script>
+</body>
+</html>
