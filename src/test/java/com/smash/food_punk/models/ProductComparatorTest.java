@@ -47,9 +47,9 @@ public class ProductComparatorTest {
 
 	static Stream<Arguments> testMatchingProducts() {
 
-		Product sweetApple1 = new Product(APPLE_NAME_1, 1.5);
-		Product iPhone1 = new Product(PHONE_NAME_1, 1200.00);
-		Product pineapple1 = new Product(PINEAPPLE_NAME_1, 2.75);
+		Product sweetApple1 = new Product(1, APPLE_NAME_1, 1.5);
+		Product iPhone1 = new Product(2, PHONE_NAME_1, 1200.00);
+		Product pineapple1 = new Product(3, PINEAPPLE_NAME_1, 2.75);
 
 		return Stream.of(Arguments.of(sweetApple1, sweetApple1), Arguments.of(iPhone1, iPhone1),
 				Arguments.of(pineapple1, pineapple1));
@@ -57,12 +57,12 @@ public class ProductComparatorTest {
 
 	static Stream<Arguments> testNonMatchingProducts() {
 
-		Product sweetApple1 = new Product(APPLE_NAME_1, 1.5);
-		Product sweetApple2 = new Product(APPLE_NAME_3, 1.55);
-		Product iPhone1 = new Product(PHONE_NAME_1, 1200.00);
-		Product iPhone2 = new Product(PHONE_NAME_2, 999.99);
-		Product pineapple1 = new Product(PINEAPPLE_NAME_1, 2.75);
-		Product pineapple2 = new Product(PINEAPPLE_NAME_3, 1.55);
+		Product sweetApple1 = new Product(1, APPLE_NAME_1, 1.5);
+		Product sweetApple2 = new Product(2, APPLE_NAME_3, 1.55);
+		Product iPhone1 = new Product(3, PHONE_NAME_1, 1200.00);
+		Product iPhone2 = new Product(4, PHONE_NAME_2, 999.99);
+		Product pineapple1 = new Product(5, PINEAPPLE_NAME_1, 2.75);
+		Product pineapple2 = new Product(6, PINEAPPLE_NAME_3, 1.55);
 
 		return Stream.of(Arguments.of(sweetApple1, sweetApple2), Arguments.of(iPhone1, iPhone2),
 				Arguments.of(pineapple1, pineapple2));
@@ -90,12 +90,12 @@ public class ProductComparatorTest {
 	@Test
 	public void returnSortedLowestPriceSuccessTest() {
 
-		Product sweetApple1 = new Product(APPLE_NAME_1, 1.5);
-		Product sweetApple2 = new Product(APPLE_NAME_3, 1.55);
-		Product iPhone1 = new Product(PHONE_NAME_1, 1200.00);
-		Product iPhone2 = new Product(PHONE_NAME_2, 999.99);
-		Product pineapple1 = new Product(PINEAPPLE_NAME_1, 2.75);
-		Product pineapple2 = new Product(PINEAPPLE_NAME_3, 1.55);
+		Product sweetApple1 = new Product(1, APPLE_NAME_1, 1.5);
+		Product sweetApple2 = new Product(2, APPLE_NAME_3, 1.55);
+		Product iPhone1 = new Product(3, PHONE_NAME_1, 1200.00);
+		Product iPhone2 = new Product(4, PHONE_NAME_2, 999.99);
+		Product pineapple1 = new Product(5, PINEAPPLE_NAME_1, 2.75);
+		Product pineapple2 = new Product(6, PINEAPPLE_NAME_3, 1.55);
 
 		List<Product> apples = Arrays.asList(sweetApple1, sweetApple2);
 		List<Product> phones = Arrays.asList(iPhone1, iPhone2);
