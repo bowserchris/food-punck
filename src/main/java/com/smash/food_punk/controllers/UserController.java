@@ -45,26 +45,32 @@ public class UserController {
 
 	@GetMapping(URL_GET_ALL_PRODUCTS) // base + "/user" + "/allProducts"
 	public List<Product> getAllProducts() {
+		logger.info("Within UserController.getAllProducts() method");
 		return this.userService.getProducts();
 	}
 
 	@GetMapping(URL_BY_PRODUCT_ID) // base + "/user" + "/idProduct/{id}"
 	public ResponseEntity<Optional<Product>> getProductByID(@PathVariable int id) {
+		logger.info("Within UserController.getProductById() method");
 		Optional<Product> product = this.userService.getProductById(id);
 		if (product.isEmpty()) {
+			logger.info("Within UserController.getProductById() method. Product is Empty");
 			return ResponseEntity.notFound().build();
 		}
+		logger.info("Within UserController.getProductById() method. Product returned");
 			return ResponseEntity.ok(product);
 	}
 
 	@DeleteMapping(URL_BY_PRODUCT_ID) // base + "/user" + "/idProduct/{id}"
 	public void deleteProductFromInventory(@PathVariable int id) {
+		logger.info("Within UserController.deleteProductFromInventory() method.");
 		this.userService.deleteProduct(id);
 	}
 
 	@PutMapping(URL_BY_PRODUCT_ID) // base + "/user" + "/idProduct/{id}"
 	public ResponseEntity<Product> updateProductInInventory(@PathVariable int id, @RequestBody Product productDetails) {
-		Product updatedProduct = this.userService.updateProdcut(id).orElse(null);
+		Product updatedProduct = this.userService.updateProdcut(id, productDetails).orElse(null);
+		logger.info("Within UserController.updateProductInInventory() method.");
 		if (updatedProduct != null) {
 			updatedProduct.setId(productDetails.getId());
 			updatedProduct.setName(productDetails.getName());
@@ -77,7 +83,19 @@ public class UserController {
 //			updatedProduct.setDateExpired(productDetails.getDateExpired());
 			return ResponseEntity.ok(updatedProduct);
 		}
+		logger.info("Within UserController.updateProductInInventory() method. Product is Empty");
 		return ResponseEntity.notFound().build();
+	}
+
+	@GetMapping("/sortProducts") // base + "/user" + "/sortProducts"
+	public List<Product> getSortedList() {
+		logger.info("Within UserController.getSortedList() method.");
+		return userService.getSortedList();
+	}
+
+	@GetMapping("/lowestPrice") // base + "/user" + "/lowestPrice"
+	public Product getLowestPricedProduct() {
+		return userService.getSortedList().get(0);
 	}
 
 }

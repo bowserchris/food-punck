@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 2nd step C - MAIN PAGE - when pressing the get button, it looks for it in the database
 	document.getElementById('getProductsBtn')
 			.addEventListener('click', fetchAndDisplayData.bind(null, 'Product'));	
+	
+	document.getElementById('sortProductsBtn').addEventListener('click', fetchAndSortData.bind(null, 'Product'));
+	
+	document.getElementById('lowestPriceBtn').addEventListener('click', fetchLowestPrice.bind(null, 'Product'));
 			
 	// 2nd step E - FORM USER/PRODUCT, when pressing cancel, it hides the form and returns to main page
 	document.getElementById('cancelProductBtn').addEventListener('click', hideForm);		
@@ -39,13 +43,25 @@ document.addEventListener('DOMContentLoaded', function() {
 		formProduct.reset();
 	}			
 	
-	// 2nd step C - MAIN PAGE - when pressing the get button, it looks for it in the database
-	document.getElementById('getProductsBtn')
-			.addEventListener('click', fetchAndDisplayData.bind(null, 'Product'));	
-			
 	//								User , Product
 	async function fetchAndDisplayData(type) {
 		await fetch(`${BASE_URL_USER}/all${type}s`)
+			.then(response => response.json())
+			.then(data => {
+				data.forEach(item => displayList(data, item));
+			});
+	}
+	
+	async function fetchAndSortData(type) {
+		await fetch(`${BASE_URL_USER}/sort${type}s`)
+			.then(response => response.json())
+			.then(data => {
+				data.forEach(item => displayList(data, item));
+			});
+	}
+	
+	async function fetchLowestPrice() {
+		await fetch(`${BASE_URL_USER}/lowestPrice`)
 			.then(response => response.json())
 			.then(data => {
 				data.forEach(item => displayList(data, item));
