@@ -101,9 +101,9 @@ public class ProductComparatorTest {
 		List<Product> phones = Arrays.asList(iPhone1, iPhone2);
 		List<Product> pineapples = Arrays.asList(pineapple1, pineapple2);
 
-		assertEquals(sweetApple1, productComparator.returnSortedLowestPrice(apples));
-		assertEquals(iPhone2, productComparator.returnSortedLowestPrice(phones));
-		assertEquals(pineapple2, productComparator.returnSortedLowestPrice(pineapples));
+		assertEquals(sweetApple1, productComparator.returnSortedListByLowestPrice(apples));
+		assertEquals(iPhone2, productComparator.returnSortedListByLowestPrice(phones));
+		assertEquals(pineapple2, productComparator.returnSortedListByLowestPrice(pineapples));
 	}
 
 }
