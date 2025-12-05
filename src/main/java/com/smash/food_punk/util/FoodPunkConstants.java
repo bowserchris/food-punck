@@ -35,7 +35,7 @@ public class FoodPunkConstants {
 	/// GENERAL MAPPINGS
 	public static final String INDEX = "/";
 //	public static final String INDEX_STORE = "/store";
-//	public static final String INDEX_USER = "/user";
+	public static final String INDEX_USER = "/user";
 
 	/// GET MAPPINGS ///
 //	public static final String URL_GET_ALL_USERS = "/allUsers";
