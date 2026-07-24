@@ -3,13 +3,14 @@
  */
 package com.smash.food_punk.utils;
 
-import lombok.NoArgsConstructor;
 
 /**
  * Constants for testing Food Punk
  */
-@NoArgsConstructor
 public class FoodPunkConstantsTest {
+
+	public FoodPunkConstantsTest() {
+	}
 
 	/// TEST DISPLAY NAMES ///
 	public static final String DISPLAY_NAME_CLASS_TEST = "Comparing products test class";

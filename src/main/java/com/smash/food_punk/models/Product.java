@@ -7,23 +7,47 @@ import java.util.Objects;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
  * Class representing a product/item
  */
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class Product {
 
 	private int id;
 	private String name;
 	private double price;
 
-	// @Data provides constructor, getters, setters & toString methods
+	public Product() {
+	}
+
+	public Product(int id, String name, double price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -44,8 +68,6 @@ public class Product {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name, price);
+		return Objects.hash(this.id, this.name, this.price);
 	}
-
-
 }
